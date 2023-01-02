@@ -5,8 +5,17 @@ content-type: application/json
 {
     "email": "asdf@asdfadsf.com",
     "password": "asdfff",
-    "admin": true
 }
+
+### login
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "asdf@asdfadsf.com",
+    "password": "asdfff",
+}
+
 
 ### Find a particular user with a given ID
 GET http://localhost:3000/auth/3
@@ -15,7 +24,7 @@ GET http://localhost:3000/auth/3
 GET http://localhost:3000/auth?email=asdf@asdfadsf.com
 
 ### Delete a user given id
-DELETE http://localhost:3000/auth/2
+DELETE http://localhost:3000/auth/17
 
 ### Update a user
 PATCH  http://localhost:3000/auth/3
