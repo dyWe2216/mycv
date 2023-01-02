@@ -17,6 +17,10 @@ export class UsersService {
   }
 
   async findOne(id: number) {
+    if (!id) {
+      return null;
+    }
+
     const user = await this.repo.findOneBy({ id });
 
     if (!user) {
