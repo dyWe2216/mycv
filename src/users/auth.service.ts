@@ -18,7 +18,7 @@ export class AuthService {
     const users = await this.usersService.find(email);
 
     if (users.length) {
-      throw new BadRequestException('email in use');
+      throw new BadRequestException('email already in use');
     }
 
     // Hash the users password
